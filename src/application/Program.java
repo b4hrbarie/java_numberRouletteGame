@@ -1,7 +1,9 @@
+package src.application;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Program {
   public static void main(String[] args) {
     System.out.println("Boas vindas! Quer brincar de adivinhar? s = sim / n = não");
     Scanner scan1 = new Scanner(System.in);
@@ -12,8 +14,8 @@ public class Main {
         System.out.println("2 - Médio (1 a 50 com quinze tentativas)");
         System.out.println("3 - Difícil (1 a 100 com vinte tentativas)");
         System.out.println("4 - Impossível (1 a 500 com incontáveis tentativas)");
-        Scanner scan2 = new Scanner(System.in);
-        int difficulty = scan2.nextInt();
+        scan1 = new Scanner(System.in);
+        int difficulty = scan1.nextInt();
             //Declaração de variáveis que serão usadas em todas as dificuldades
             Random random = new Random();
             int guess = 0;
@@ -26,8 +28,8 @@ public class Main {
                 System.out.println("Estou pensando em um número de 1 à 10. Tente adivinhar! (voce tem 3 tentativas)");
                 rouletteNumber = random.nextInt(1,11);
                 do {
-                Scanner scan3 = new Scanner(System.in);
-                guess = scan3.nextInt();  
+                scan1 = new Scanner(System.in);
+                guess = scan1.nextInt();  
                 if (guess == rouletteNumber) {
                 System.out.println("Parabéns! Você acertou!");
                 break;
@@ -50,8 +52,8 @@ public class Main {
                 System.out.println("Estou pensando em um número de 1 à 50. Tente adivinhar! (voce tem 15 tentativas)");
                 rouletteNumber = random.nextInt(1,16);
                 do {
-                Scanner scan3 = new Scanner(System.in);
-                guess = scan3.nextInt();  
+                scan1 = new Scanner(System.in);
+                guess = scan1.nextInt();  
                 if (guess == rouletteNumber) {
                 System.out.println("Parabéns! Você acertou!");
                 break;
@@ -73,8 +75,8 @@ public class Main {
                 System.out.println("Estou pensando em um número de 1 à 100. Tente adivinhar! (voce tem 20 tentativas)");
                 rouletteNumber = random.nextInt(1,21);
                 do {
-                Scanner scan3 = new Scanner(System.in);
-                guess = scan3.nextInt();  
+                scan1 = new Scanner(System.in);
+                guess = scan1.nextInt();  
                 if (guess == rouletteNumber) {
                 System.out.println("Parabéns! Você acertou!");
                 break;
@@ -90,10 +92,10 @@ public class Main {
                   System.out.println("GAME OVER! Você perdeu! O número era " +rouletteNumber);
                 }
               } break;
-          
-            
+              
+              
             }
-        
+            scan1.close();
       }
   }
 }
