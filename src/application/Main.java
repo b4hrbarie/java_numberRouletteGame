@@ -1,10 +1,12 @@
 package application;
 
+//import exceptions.EntriesException;
+//import entities.RouletteNumberGame;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Program {
-  public static void main(String[] args) {
+public class Main { public static void main(String[] args) {
     System.out.println("Boas vindas! Quer brincar de adivinhar? s = sim / n = não");
     Scanner scan1 = new Scanner(System.in);
     char wannaPlay = scan1.next().charAt(0);
@@ -40,7 +42,7 @@ public class Program {
                   System.out.println("ATENÇÃO! Ultima tentativa!");
                   tries ++;
                 }
-                  
+
                 } while (guess != rouletteNumber && tries <= totalTries);
                 if (tries == (totalTries+1)) {
                   System.out.println("GAME OVER! Você perdeu! O número era " +rouletteNumber);
@@ -92,10 +94,11 @@ public class Program {
                   System.out.println("GAME OVER! Você perdeu! O número era " +rouletteNumber);
                 }
               } break;
-              
-              
+
+
             }
-            scan1.close();
+            
       }
+  scan1.close();
   }
 }
